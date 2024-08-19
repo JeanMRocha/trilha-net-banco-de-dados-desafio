@@ -46,7 +46,7 @@ Você deverá criar diversas consultas, com o objetivo de retornar os dados a se
 SELECT nome, ano
 FROM Filmes;
 
-![Exercicio 1](Imagens/1.png)
+![Exercicio 1](Resolvido\ex01.jpg)
 
 ## 2 - Buscar o nome e ano dos filmes, ordenados por ordem crescente pelo ano
 
@@ -54,7 +54,7 @@ SELECT nome, ano
 FROM Filmes
 ORDER BY ano ASC;
 
-![Exercicio 2](Imagens/2.png)
+![Exercicio 2](Resolvido\ex02.jpg)
 
 ## 3 - Buscar pelo filme de volta para o futuro, trazendo o nome, ano e a duração
 
@@ -62,7 +62,7 @@ SELECT nome, ano, duracao
 FROM Filmes
 WHERE nome = 'De Volta Para o Futuro';
 
-![Exercicio 3](Imagens/3.png)
+![Exercicio 3](Resolvido\ex03.jpgg)
 
 ## 4 - Buscar os filmes lançados em 1997
 
@@ -70,7 +70,7 @@ SELECT nome, ano
 FROM Filmes
 WHERE ano = 1997;
 
-![Exercicio 4](Imagens/4.png)
+![Exercicio 4](Resolvido\ex04.jpgg)
 
 ## 5 - Buscar os filmes lançados APÓS o ano 2000
 
@@ -78,7 +78,7 @@ SELECT nome, ano
 FROM Filmes
 WHERE ano > 2000;
 
-![Exercicio 5](Imagens/5.png)
+![Exercicio 5](Resolvido\ex05.jpg)
 
 ## 6 - Buscar os filmes com a duracao maior que 100 e menor que 150, ordenando pela duracao em ordem crescente
 
@@ -87,7 +87,7 @@ FROM Filmes
 WHERE duracao > 100 AND duracao < 150
 ORDER BY duracao ASC;
 
-![Exercicio 6](Imagens/6.png)
+![Exercicio 6](Resolvido\ex06.jpg)
 
 ## 7 - Buscar a quantidade de filmes lançadas no ano, agrupando por ano, ordenando pela duracao em ordem decrescente
 
@@ -96,14 +96,14 @@ FROM Filmes
 GROUP BY ano
 ORDER BY quantidade_filmes DESC;
 
-![Exercicio 7](Imagens/7.png)
+![Exercicio 7](Resolvido\ex07.jpg)
 
 ## 8 - Buscar os Atores do gênero masculino, retornando o PrimeiroNome, UltimoNome
 SELECT primeiroNome, ultimoNome
 FROM Atores
 WHERE genero = 'M';
 
-![Exercicio 8](Imagens/8.png)
+![Exercicio 8](Resolvido\ex08.jpg)
 
 ## 9 - Buscar os Atores do gênero feminino, retornando o PrimeiroNome, UltimoNome, e ordenando pelo PrimeiroNome
 SELECT primeiroNome, ultimoNome
@@ -111,7 +111,7 @@ FROM Atores
 WHERE genero = 'F'
 ORDER BY primeiroNome ASC;
 
-![Exercicio 9](Imagens/9.png)
+![Exercicio 9](Resolvido\ex09.jpg)
 
 ## 10 - Buscar o nome do filme e o gênero
 
@@ -121,7 +121,7 @@ JOIN FilmesGenero AS FG ON F.Id = FG.IdFilme
 JOIN Generos AS G ON FG.IdGenero = G.Id;
 
 
-![Exercicio 10](Imagens/10.png)
+![Exercicio 10](Resolvido\ex10.jpg)
 
 ## 11 - Buscar o nome do filme e o gênero do tipo "Mistério"
 SELECT F.Nome AS NomeFilme, G.Genero AS Genero
@@ -130,7 +130,7 @@ JOIN FilmesGenero AS FG ON F.Id = FG.IdFilme
 JOIN Generos AS G ON FG.IdGenero = G.Id;
 WHERE genero = 'Mistério';
 
-![Exercicio 11](Imagens/11.png)
+![Exercicio 11](Resolvido\ex11.jpg)
 
 ## 12 - Buscar o nome do filme e os atores, trazendo o PrimeiroNome, UltimoNome e seu Papel
 
@@ -139,4 +139,4 @@ FROM Filmes AS F
 JOIN ElencoFilme AS FA ON F.Id = FA.IdFilme
 JOIN Atores AS A ON FA.IdAtor = A.id;
 
-![Exercicio 12](Imagens/12.png)
+![Exercicio 12](Resolvido\ex12.jpg)
