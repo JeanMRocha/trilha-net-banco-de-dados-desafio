@@ -101,27 +101,33 @@ ORDER BY quantidade_filmes DESC;
 ## 8 - Buscar os Atores do gênero masculino, retornando o PrimeiroNome, UltimoNome
 SELECT primeiroNome, ultimoNome
 FROM Atores
-WHERE genero = 'Masculino';
+WHERE genero = 'M';
 
 ![Exercicio 8](Imagens/8.png)
 
 ## 9 - Buscar os Atores do gênero feminino, retornando o PrimeiroNome, UltimoNome, e ordenando pelo PrimeiroNome
 SELECT primeiroNome, ultimoNome
 FROM Atores
-WHERE genero = 'Feminino'
+WHERE genero = 'F'
 ORDER BY primeiroNome ASC;
 
 ![Exercicio 9](Imagens/9.png)
 
 ## 10 - Buscar o nome do filme e o gênero
-SELECT nome, genero
-FROM Filmes;
+
+SELECT F.Nome AS NomeFilme, G.Genero AS Genero
+FROM Filmes AS F
+JOIN FilmesGenero AS FG ON F.Id = FG.IdFilme
+JOIN Generos AS G ON FG.IdGenero = G.Id;
+
 
 ![Exercicio 10](Imagens/10.png)
 
 ## 11 - Buscar o nome do filme e o gênero do tipo "Mistério"
-SELECT nome, genero
-FROM Filmes
+SELECT F.Nome AS NomeFilme, G.Genero AS Genero
+FROM Filmes AS F
+JOIN FilmesGenero AS FG ON F.Id = FG.IdFilme
+JOIN Generos AS G ON FG.IdGenero = G.Id;
 WHERE genero = 'Mistério';
 
 ![Exercicio 11](Imagens/11.png)
@@ -130,7 +136,7 @@ WHERE genero = 'Mistério';
 
 SELECT F.nome AS nome_filme, A.primeiroNome, A.ultimoNome, FA.papel
 FROM Filmes AS F
-JOIN Filmes_Atores AS FA ON F.id = FA.filme_id
-JOIN Atores AS A ON FA.ator_id = A.id;
+JOIN ElencoFilme AS FA ON F.Id = FA.IdFilme
+JOIN Atores AS A ON FA.IdAtor = A.id;
 
 ![Exercicio 12](Imagens/12.png)
